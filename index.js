@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
     socket.on('msg', (msg) => {
         //broadcast to all clients
         console.log('message: ' + msg);
-        socket.broadcast.emit('hashtags', msg);
+        socket.broadcast.emit('hashtags', [msg]);
     });
 })
 
